@@ -5,16 +5,20 @@ import Navbar from "./components/Navbar.js";
 import Projects from "./components/Projects.js";
 import Skills from "./components/Skills.js";
 import Testimonials from "./components/Testimonials.js";
+import Facts from "./components/Facts.js";
+import "./styles.css";
+
 
 
 export default function App() {
   return (
-    <main className="text-gray-400 bg-gray-900 body-font">
+    <main className="text-white bg-dark body-font">
        <Navbar />
       <About />
       <Projects />
       <Skills />
       <Testimonials />
+      <Facts />
       <Contact />
     
     </main>

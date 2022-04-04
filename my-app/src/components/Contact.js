@@ -1,5 +1,10 @@
 
 import React from "react";
+import girl4 from "./casual-life-3d-designer-at-work-mail-deadline-chat (1).png";
+import { BsGithub, BsLinkedin, BsArrowRight } from 'react-icons/bs';
+import { FaDribbble } from 'react-icons/fa';
+import { SiRedbubble } from 'react-icons/si';
+
 
 export default function Contact() {
   const [name, setName] = React.useState("");
@@ -28,98 +33,75 @@ export default function Contact() {
   return (
     <section id="contact" className="relative">
       <div className="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap">
-        <div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
-          <iframe
-            width="100%"
-            height="100%"
-            title="map"
-            className="absolute inset-0"
-            frameBorder={0}
-            marginHeight={0}
-            marginWidth={0}
-            style={{ filter: "opacity(0.7)" }}
-            src="https://www.google.com/maps/embed/v1/place?q=97+warren+st+new+york+city&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
-          />
-          <div className="bg-gray-900 relative flex flex-wrap py-6 rounded shadow-md">
-            <div className="lg:w-1/2 px-6">
-              <h2 className="title-font font-semibold text-white tracking-widest text-xs">
-                ADDRESS
-              </h2>
-              <p className="mt-1">
-                97 Warren St. <br />
-                New York, NY 10007
-              </p>
-            </div>
-            <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
-              <h2 className="title-font font-semibold text-white tracking-widest text-xs">
-                EMAIL
-              </h2>
-              <a className="text-indigo-400 leading-relaxed">
-                placeHolder@domain.com
-              </a>
-              <h2 className="title-font font-semibold text-white tracking-widest text-xs mt-4">
-                PHONE
-              </h2>
-              <p className="leading-relaxed">555-456-7890</p>
-            </div>
+        <div className="lg:w-full md:w-1/2 bg-gradient-contact rounded-lg overflow-hidden sm:mr-10 p-12 flex  relative">
+          <div className="w-1/2">
+            <h1 className="sm:text-4xl text-5xl font-semibold mb-5 text-bleachWhite">Get in touch!</h1>
+            <h6 className="text-bleachWhite font-semibold">Let me know of any cool ideas!</h6>
+            <p className="text-bleachWhite font-medium leading-7 mt-10">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</p>
           </div>
-        </div>
         <form
           netlify
           name="contact"
           onSubmit={handleSubmit}
-          className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
-          <h2 className="text-white sm:text-4xl text-3xl mb-1 font-medium title-font">
-            Hire Me
-          </h2>
-          <p className="leading-relaxed mb-5">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum
-            suscipit officia aspernatur veritatis. Asperiores, aliquid?
-          </p>
-          <div className="relative mb-4">
-            <label htmlFor="name" className="leading-7 text-sm text-gray-400">
-              Name
-            </label>
+          className="lg:w-1/2  md:w-1/2 flex flex-col ml-10 w-full">
+           <div className="flex flex-wrap">
+          <div className=" mb-4 w-64 mr-4">
             <input
               type="text"
-              id="name"
+              id="nameForm"
               name="name"
-              className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full rounded-2xl border border-white bg-transparent focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              placeholder="Your Name"
               onChange={(e) => setName(e.target.value)}
             />
           </div>
-          <div className="relative mb-4">
-            <label htmlFor="email" className="leading-7 text-sm text-gray-400">
-              Email
-            </label>
+          <div className=" w-64  ">
             <input
               type="email"
-              id="email"
+              id="emailForm"
               name="email"
-              className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full  rounded-2xl border border-white bg-transparent focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              placeholder="Your Email"
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
+          </div>
           <div className="relative mb-4">
-            <label
-              htmlFor="message"
-              className="leading-7 text-sm text-gray-400">
-              Message
-            </label>
             <textarea
-              id="message"
+              id="messageForm"
               name="message"
-              className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+              className="w-full bg-transparent rounded-2xl border border-white focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+              placeholder="Your Message"
               onChange={(e) => setMessage(e.target.value)}
             />
           </div>
           <button
             type="submit"
-            className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-            Submit
+            className="text-bleachWhite bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded-2xl text-lg">
+            Say Hello!
           </button>
         </form>
+          
+        </div>
+       
       </div>
+      <div className="container px-5 pt-10 pb-8 mx-auto flex sm:flex-nowrap flex-wrap">
+          <img src={girl4}  className="w-1/3 mx-auto pt-16"/>
+      </div>
+      <div class="grid grid-cols-1 pb-5">
+      <p className="mx-auto text-secondary flex">Designed &#38; Built by Emily Koranda</p>
+      <div className="mx-auto mt-3">
+          <BsGithub className="inline-flex text-secondary text-2xl mr-5"></BsGithub>
+          <BsLinkedin className="inline-flex text-secondary text-2xl mr-5"></BsLinkedin>
+          <FaDribbble className="inline-flex text-secondary text-2xl mr-5"></FaDribbble>
+          <SiRedbubble className="inline-flex text-secondary text-2xl"></SiRedbubble>
+          </div>
+      <div>
+      
+      </div>
+          
+      </div>
+
     </section>
   );
 }
