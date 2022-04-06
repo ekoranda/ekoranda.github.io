@@ -36,7 +36,7 @@ export default function About() {
         
           <div className="flex justify-center">
             <a
-              href="#"
+            href={require("./Emily Koranda Resume.pdf")} download="EmilyKorandaResume"
               className="inline-flex text-bleachWhite gradient-button border-0 py-2 px-6 rounded-full text-lg rainbow sink hover:font-bold">
               Download CV
               <BsArrowRight className="text-2xl font-black ml-6 mt-1 hover:font-semibold"></BsArrowRight>

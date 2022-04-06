@@ -30,9 +30,11 @@ export default function Projects() {
       </div>
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 relative flex flex-col items-center ">
           <MdSchool className="text-secondary text-10xl"></MdSchool>
-          <p className="text-white px-20 line-height-35 font-medium mb-10 mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+          <p className="text-white px-20 line-height-35 font-medium mb-10 mt-5">
+            I'm a current senior at UW-Madison pursuing a Bachelor's of Science in Computer Science and a certificate in Digital Studies.
+          </p>
           <GiBullseye className="text-secondary text-10xl"></GiBullseye>
-          <p className="text-white px-20 line-height-35 font-medium mb-10 mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+          <p className="text-white px-20 line-height-35 font-medium mb-10 mt-5"> I want to combine my formal computer science education with my passion for digital design and creativity to create innovative and imaginative user experiences.</p>
 
         </div>
       </div>

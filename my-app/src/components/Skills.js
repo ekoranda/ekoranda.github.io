@@ -28,17 +28,17 @@ export default function Skills() {
             <div className="content-center px-10 py-10 shadow rounded-xl w-11/12">
               <img src={stationary} alt="logo" className="w-1/4 mx-auto mb-3"/>
               <h6 className="text-2xl font-semibold mb-4 text-danger">Engineering</h6>
-              <p className="text-white leading-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <p className="text-white leading-6">I plan, build, and implement user interface systems for web and mobile applications to ensure responsive and satisfactory user experiences.</p>
             </div>  
             <div className="content-center px-10 py-10 shadow rounded-xl w-11/12">
               <img src={stationary} alt="logo" className="w-1/4 mx-auto mb-3"/>
               <h6 className="text-2xl font-semibold mb-4 text-primary">Design</h6>
-              <p className="text-white leading-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <p className="text-white leading-6">I use design tools to create high-fidelity designs and prototypes to translate my clients' brands into accessible and intuitive websites.</p>
             </div> 
             <div className="content-center px-10 py-10 shadow rounded-xl w-11/12">
               <img src={stationary} alt="logo" className="w-1/4 mx-auto mb-3"/>
               <h6 className="text-2xl font-semibold mb-4 text-warning">UI/UX</h6>
-              <p className="text-white leading-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <p className="text-white leading-6">I design functional and user-friendly user experiences by identifying and analyzing new and innovative digital technologies.</p>
             </div> 
           </div>
           
