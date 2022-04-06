@@ -391,3 +391,9 @@ ul {
     background-position: 200% center;
   }
 }
+
+.projImg {
+    height: 10em;
+    width: 15em;
+    object-fit: contain;
+}

@@ -4,29 +4,38 @@ import { testimonials } from "../data";
 import "../styles.css";
 import ScrollMenu from 'react-horizontal-scroll-menu';
 
+import proj1 from "./Courses.png";
+import proj2 from "./exercise.png";
+import proj3 from "./healthily.png";
+import proj4 from "./calendar.png";
+import proj5 from "./portfolio.png";
+import proj6 from "./biocompace.png";
+
+
 // list of items
 const list = [
-  { name: 'Project Name 1'},
-  { name: 'Project Name 2' },
-  { name: 'Project Name 3' },
-  { name: 'Project Name 4' },
-  { name: 'Project Name 5' },
-  { name: 'Project Name 6' },
+  { name: 'Course Search Reimagined', tools: 'React, Bootstrap, CSS', pic: proj1},
+  { name: 'Fitness Tracker', tools: 'React-native, CSS', pic: proj2 },
+  { name: 'Healthi.ly', tools: 'Android, Kotlin, Firebase', pic: proj3 },
+  { name: 'Canvas Calendar Reimagined', tools: 'Figma, talk-aloud, modeling', pic: proj4 },
+  { name: 'Personal Portfolio', tools: 'React, Tailwind, Figma', pic: proj5 },
+  { name: 'Biocompace Project', tools: 'Java, BPMN, Wildfly, SAML', pic: proj6 },
 
 ];
  
 // One item component
 // selected prop will be passed
-const MenuItem = ({text, selected}) => {
+const MenuItem = ({text, tools, pic, selected}) => {
   return (
     <div className={`menu-item ${selected ? 'active' : ''}`, `p-7` }>
       <div className="flex justify-center">
         <div className="proj-shadow">
-          <div className="projLogo w-64 h-48">
+          <div className="projLogo w-64 h-48 p-3">
+          <img src={pic}  className="projImg"/>
           </div>
           <div className="projLabel bg-white py-3 px-3">
             <p className="text-dark font-semibold">{text}</p>
-            <p className="text-danger">CSS, HTML, Bootstrap</p>
+            <p className="text-danger">{tools}</p>
           </div>
         
         </div>
@@ -40,7 +49,7 @@ export const Menu = (list, selected) =>
   list.map(el => {
     const {name} = el;
  
-    return <MenuItem text={name} key={name} selected={selected} />;
+    return <MenuItem text={name} tools={el.tools} key={name} selected={selected} pic={el.pic} />;
   });
  
  
