@@ -109,7 +109,7 @@ export default function Skills() {
         <div className="grid grid-cols-3 gap-4 gradient-background p-10 mx-16">
           <div className="col-span-2">
             <h3 className="text-2xl font-semibold text-bleachWhite mb-5">My Approach</h3>
-            <p className="text-bleachWhite leading-8 font-light">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            <p className="text-bleachWhite leading-8 font-light">"The education I received at UW-Madison has given me a solid foundation for implementing software engineering processes and the UX design thinking approach in the workplace, and past experiences have given me a deep understanding of digital marketing and working one-on-one with clients. In my work, I like to use an iterative approach in which my clients actively participate in the entire design process so they can feel confident that the final user interface will reflect the brand of their company. "</p>
           </div>
           <div className="relative">
             
