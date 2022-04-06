@@ -7,6 +7,7 @@ class Facts extends React.Component {
     render(){
         return (
             <section id="facts">
+                
                 <div className="container px-5 py-10 mx-auto mt-20">
                     <div className="text-center mb-20">
                         <h6 className="text-primary mb-0">Get to know me</h6>
