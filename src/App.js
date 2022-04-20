@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./components/Navbar.js";
 import Contact from "./components/Contact.js";
 import Main from "./Main.js";
+import Button from 'react-bootstrap/Button';
 
 
 import "./styles.css";

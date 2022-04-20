@@ -20,7 +20,7 @@ export default function Skills() {
             Services I Offer
           </h1>
 
-          <div class="grid grid-cols-3 gap-8 mt-20 justify-items-center mx-24">
+          <div class="grid grid-cols-3 gap-8 mt-20 justify-items-center mx-10">
            
             <div className="content-center px-10 py-10 shadow rounded-xl w-11/12">
               <img src={stationary} alt="logo" className="w-1/4 mx-auto mb-3"/>
@@ -76,27 +76,27 @@ export default function Skills() {
           </div>
           <div>
           <SiJavascript className="text-secondary text-6xl" ></SiJavascript>
-            <h6 className="text-secondary mt-5">JavaScript</h6>
+            <h6 className="text-secondary mt-3">JavaScript</h6>
           </div>
           <div>
           <SiReact className="text-secondary text-6xl" ></SiReact>
-            <h6 className="text-secondary pl-3 mt-5">React</h6>
+            <h6 className="text-secondary pl-3 mt-3">React</h6>
           </div>
           <div>
             <SiTailwindcss className="text-secondary text-6xl" ></SiTailwindcss>
-            <h6 className="text-secondary  mt-5">Tailwind</h6>
+            <h6 className="text-secondary  mt-3">Tailwind</h6>
           </div>
           <div>
           <SiAndroid className="text-secondary text-6xl" ></SiAndroid>
-            <h6 className="text-secondary mt-5">Android</h6>
+            <h6 className="text-secondary mt-3">Android</h6>
           </div>
           <div>
           <CgFigma className="text-secondary text-6xl" ></CgFigma>
-            <h6 className="text-secondary mt-5">Figma</h6>
+            <h6 className="text-secondary mt-3">Figma</h6>
           </div>
           <div>
           <SiCanva className="text-secondary text-6xl" ></SiCanva>
-            <h6 className="text-secondary pl-3 mt-5">Canva</h6>
+            <h6 className="text-secondary pl-3 mt-3">Canva</h6>
           </div>
         </div>
         </div>

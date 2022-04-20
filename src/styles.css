@@ -1,30 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 .bg-dark {
-    background-color: #1A0024;
+    background-color: #1A0024 !important;
 }
 .bg-dark-transparent {
     background-color: rgba(26, 0, 36, 0.9);
 }
 
 .text-white {
-    color: #CCCCCC;
+    color: #CCCCCC !important;
 }
 
 .text-secondary {
-    color: #95869E;
+    color: #95869E !important;
 }
 
 .text-danger {
-    color: #858AE3;
+    color: #858AE3 !important;
 }
 
 .text-warning {
-    color: #97DFFC;
+    color: #97DFFC !important;
 }
 
 .border-primary {
-    border-color: #F72585;
+    border-color: #F72585 !important;
 }
 
 .text-bleachWhite{
@@ -32,16 +32,16 @@
 }
 
 .font-medium{
-    font-weight: 350;
+    font-weight: 350 !important;
 }
 
 .underline-primary{
-    text-decoration: none;
+    text-decoration: none !important;
 
 }
 
 .underline-primary:hover {
-    background-size: 0 3px, 100% 3px;
+    background-size: 0 3px, 100% 3px !important;
   }
 
 .underline-primary {
@@ -65,20 +65,20 @@
   }
 
 .text-primary {
-    color: #F72585;
+    color: #F72585 !important;
 }
 
 .text-6xl{
-    font-size: 4rem;
-    line-height: 85px;
+    font-size: 4rem !important;
+    line-height: 85px !important;
 }
 
 .text-5xl {
-    font-size: 3.5rem;
+    font-size: 3.5rem !important;
 }
 
 .text-10xl {
-    font-size: 7rem;
+    font-size: 7rem !important;
 }
 
 
@@ -92,7 +92,7 @@
 }
 
 .gradient-button {
-    background: linear-gradient(90deg, #EB1588 2.23%, #D21CA3 50.21%, #CB1BBE 102.23%);
+    background: linear-gradient(90deg, #EB1588 2.23%, #D21CA3 50.21%, #CB1BBE 102.23%) !important;
 }
 
 .pink-gradient {
@@ -112,7 +112,7 @@
 
 .shadow {
 
-    box-shadow: rgba(204, 204, 204, 0.5) 0px 0px 25px;
+    box-shadow: rgba(204, 204, 204, 0.5) 0px 0px 25px !important;
 }
 
 .pink-background {
@@ -159,7 +159,7 @@
   }
 
   .text-dark {
-      color: #1A0024;
+      color: #1A0024 !important;
   }
 
   .proj-shadow {
@@ -167,7 +167,7 @@
   }
 
   .bg-gradient {
-    background: linear-gradient(90deg, #EB1588 2.23%, #D21CA3 50.21%, #CB1BBE 102.23%);
+    background: linear-gradient(90deg, #EB1588 2.23%, #D21CA3 50.21%, #CB1BBE 102.23%) !important;
   }
 
   .bg-gradient-contact {
@@ -223,18 +223,18 @@
 }
 
 .btn-animate:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
 }
 
 .btn-animate:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px) !important;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2) !important;
 }
 
 .btn-white {
-    background-color: #fff;
-    color: #777;
+    background-color: #fff !important;
+    color: #777 !important;
 }
 
 .btn-animate::after {
@@ -251,7 +251,7 @@
 }
 
 .btn-white::after {
-    background-color: #fff;
+    background-color: #fff !important;
 }
 
 .btn:hover::after {
@@ -327,11 +327,20 @@ ul {
     transform: scale(1.1);
     box-shadow: 0 0 15px #F72585b6;
   }
+
+  .emily:hover {
+    color: #f72584 !important;
+  }
+
+  .rainbow:hover {
+    color: white !important;
+  }
+ 
   
   ul li a:hover {
-    color: #f72584;
-    box-shadow: 0 0 5px #F72585b6;
-    text-shadow: 0 0 5px #F72585b6;
+    color: #f72584 !important;
+    box-shadow: 0 0 5px #F72585b6 !important;
+    text-shadow: 0 0 5px #F72585b6 !important;
   }
 
   ul li a i {
@@ -342,6 +351,8 @@ ul {
     transform: translate(-50%, -50%);
   }
 
+
+ 
 
   .rainbow:hover{
   
@@ -397,3 +408,33 @@ ul {
     width: 15em;
     object-fit: contain;
 }
+
+.card-img-top {
+  height: 15em;
+  object-fit: contain;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px 15px 0px 0px;
+  
+}
+
+
+.card {
+  background-color: rgba(255, 255, 255, 0);
+  
+}
+
+.card-body {
+  background-color: white;
+  border-radius: 0px 0px 15px 15px;
+}
+
+
+.card-title {
+  color: #1A0024;
+}
+
+.card-text {
+  color: #858AE3;
+}
+
+

@@ -46,11 +46,10 @@ class Navbar extends React.Component {
     <header className="bg-dark-transparent md:sticky top-0 z-10">
       <div className="example-container">
       </div>
-      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <a className="title-font font-medium text-white mb-4 md:mb-0" >
-          <a href="#emily" className="ml-3 text-xl" onClick={() => this.addOval('emily')}>
-            Emily
-            
+      <div className="container mx-auto flex flex-wrap p-3 flex-col md:flex-row items-center">
+        <a className="title-font font-medium text-white md:py-1 items-center" >
+          <a href="#emily" className="ml-3 text-xl emily" onClick={() => this.addOval('emily')}>
+            Emily  
           </a>
         </a>
         <nav className="md:mr-auto md:ml-auto md:py-1 md:pl-4 flex flex-wrap items-center text-base justify-center">

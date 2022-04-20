@@ -4,6 +4,7 @@ import girl4 from "./img/casual-life-3d-designer-at-work-mail-deadline-chat (1).
 import { BsGithub, BsLinkedin, BsArrowRight } from 'react-icons/bs';
 import { FaDribbble } from 'react-icons/fa';
 import { SiRedbubble } from 'react-icons/si';
+import Stack from 'react-bootstrap/Stack';
 
 
 export default function Contact() {
@@ -44,8 +45,9 @@ export default function Contact() {
           name="contact"
           onSubmit={handleSubmit}
           className="lg:w-1/2  md:w-1/2 flex flex-col ml-10 w-full">
-           <div className="flex flex-wrap">
-          <div className=" mb-4 w-64 mr-4">
+          
+           <Stack direction="horizontal" gap={3} className="mb-3">
+          <div className=" w-64 ">
             <input
               type="text"
               id="nameForm"
@@ -65,7 +67,8 @@ export default function Contact() {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-          </div>
+          </Stack>
+          
           <div className="relative mb-4">
             <textarea
               id="messageForm"
