@@ -479,6 +479,7 @@ font-size: 12px;
 .factImg {
   object-fit: contain;
   height: 20em;
+  width: 20em;
 }
 
 
