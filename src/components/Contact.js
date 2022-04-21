@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, {useEffect, useState} from "react";
 import girl4 from "./img/casual-life-3d-designer-at-work-mail-deadline-chat (1).png";
 import { BsGithub, BsLinkedin, BsArrowRight } from 'react-icons/bs';
 import { FaDribbble } from 'react-icons/fa';
@@ -7,29 +7,43 @@ import { SiRedbubble } from 'react-icons/si';
 import Stack from 'react-bootstrap/Stack';
 
 
+
 export default function Contact() {
-  const [name, setName] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [message, setMessage] = React.useState("");
+  
+  const [mess, setMessage] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const onChange = (e) => {
+    const curmessage = e.target.value;
+    setMessage(curmessage);
 
-  function encode(data) {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
   }
 
-  function handleSubmit(e) {
+  const onChangeEmail = (e) => {
+    setEmail(e.target.value);
+  }
+
+  const onChangeName = (e) => {
+    setName(e.target.value);
+  }
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("/", {
+    fetch("https://pml1rktkic.execute-api.us-east-1.amazonaws.com/SendEmail", {
+      mode: "no-cors",
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", name, email, message }),
+      body: JSON.stringify({
+        senderName: "ekoranda1@gmail.com", 
+        senderEmail: "ekoranda1@gmail.com", 
+        message: "Name: " + name + " Email: " + email + "\n" + mess,
+        date: "Portfolio Message", 
+
+      })
     })
-      .then(() => alert("Message sent!"))
-      .catch((error) => alert(error));
   }
+
+ 
+ 
 
   return (
     <section id="contact" className="relative">
@@ -41,9 +55,8 @@ export default function Contact() {
             <p className="text-bleachWhite font-medium leading-7 mt-10">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</p>
           </div>
         <form
-          netlify
           name="contact"
-          onSubmit={handleSubmit}
+          
           className="lg:w-1/2  md:w-1/2 flex flex-col ml-10 w-full">
           
            <Stack direction="horizontal" gap={3} className="mb-3">
@@ -54,7 +67,7 @@ export default function Contact() {
               name="name"
               className="w-full rounded-2xl border border-white bg-transparent focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               placeholder="Your Name"
-              onChange={(e) => setName(e.target.value)}
+              onChange={onChangeName}
             />
           </div>
           <div className=" w-64  ">
@@ -64,7 +77,7 @@ export default function Contact() {
               name="email"
               className="w-full  rounded-2xl border border-white bg-transparent focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               placeholder="Your Email"
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={onChangeEmail}
             />
           </div>
           </Stack>
@@ -75,12 +88,13 @@ export default function Contact() {
               name="message"
               className="w-full bg-transparent rounded-2xl border border-white focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
               placeholder="Your Message"
-              onChange={(e) => setMessage(e.target.value)}
+              onChange={onChange}
             />
           </div>
           <button
             type="submit"
-            className="text-bleachWhite bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded-2xl text-lg">
+            className="text-bleachWhite bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded-2xl text-lg"
+            onClick={handleSubmit}>
             Say Hello!
           </button>
         </form>

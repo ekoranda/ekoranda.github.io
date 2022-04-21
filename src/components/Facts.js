@@ -66,7 +66,7 @@ const loadingVar = {
         setTitle("");
 
         //this.setState({fact: "", img: loading});
-        await delay(3800);
+        await delay(3900);
         setImg(factList[randNum].img);
         setTitle(factList[randNum].name);
        // this.setState({fact : factList[randNum].name, img : factList[randNum].img});
