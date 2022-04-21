@@ -3,13 +3,26 @@ import "../styles.css";
 import girl1 from "./img/casual-life-3d-female-metis-t-shirt-pose-notebook-4 (1).png";
 
 import { BsGithub, BsLinkedin, BsArrowRight } from 'react-icons/bs';
+import { motion } from "framer-motion";
+
 
 export default function About() {
   return (
     <section id="emily">
       <div className="container mx-auto flex px-10 py-10 md:flex-row flex-col items-center">
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 ">
-          <p className="text-danger mb-2 hover:animate-bounce">UI/UX Design</p>
+        <motion.div 
+        animate={{
+          x: ['100px' , '0px']    
+        }}
+        transition={{
+          type: 'tween',
+          duration: 1
+        }}
+        >
+<p className="text-danger mb-2 hover:animate-bounce">UI/UX Design</p>
+</motion.div>
+          
           <h1 className="sm:text-4xl text-6xl mb-4 font-medium text-bleachWhite">
           I'm <span className="animate-charcter">Emily</span>,
             <br className="hidden lg:inline-block" /><span className="underline-primary">Front-End</span>

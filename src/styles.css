@@ -437,4 +437,39 @@ ul {
   color: #858AE3;
 }
 
+.transparentBg {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+}
+
+.lightBadgePurple {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  font-size: 12px;
+}
+
+.lightBadgePink {
+  background-color: rgba(255, 167, 207, 0.6) !important;
+  font-size: 12px;
+}
+
+.lightBadgeBlue {
+  background-color: rgba(151, 223, 252, 0.6) !important;
+  font-size: 12px;
+}
+
+.lightBadgeTeal {
+background-color: rgba(164, 168, 243, 0.6) !important;
+font-size: 12px;
+}
+
+.githubLink:hover {
+  text-decoration: underline !important;
+}
+
+.projectImg {
+  height: 30em;
+  object-fit: contain;
+
+}
+
 

@@ -42,12 +42,12 @@ const responsive = {
 
 // list of items
 const list = [
-  { name: 'Course Search Reimagined', tools: 'React, Bootstrap, CSS', pic: proj1},
-  { name: 'Fitness Tracker', tools: 'React-native, CSS', pic: proj2 },
-  { name: 'Healthi.ly', tools: 'Android, Kotlin, Firebase', pic: proj3 },
-  { name: 'Canvas Calendar Reimagined', tools: 'Figma, talk-aloud, modeling', pic: proj4 },
-  { name: 'Personal Portfolio', tools: 'React, Tailwind, Figma', pic: proj5 },
-  { name: 'Biocompace Project', tools: 'Java, BPMN, Wildfly, SAML', pic: proj6 },
+  { name: 'Course Search Reimagined', tools: 'React, Bootstrap, CSS', pic: proj1, id:"courseSearch"},
+  { name: 'Fitness Tracker', tools: 'React-native, CSS', pic: proj2, id:"fitnessTracker" },
+  { name: 'Healthi.ly', tools: 'Android, Kotlin, Firebase', pic: proj3, id:"healthily" },
+  { name: 'Canvas Calendar Reimagined', tools: 'Figma, talk-aloud, modeling', pic: proj4 , id:"calendar"},
+  { name: 'Personal Portfolio', tools: 'React, Tailwind, Figma', pic: proj5, id:"portfolio" },
+  { name: 'Biocompace Project', tools: 'Java, BPMN, Wildfly, SAML', pic: proj6, id: "biocompace" },
 
 ];
  
@@ -92,7 +92,7 @@ class Testimonials extends React.Component {
    
   }
  
- 
+
  
   onSelect = (key) => {
     this.setState({ selected: key });
@@ -106,15 +106,14 @@ class Testimonials extends React.Component {
 
   }
 
-  
- 
 
-
- 
+   
  
   render() {
     // Create menu from items
     const menu = Menu(list, this.state.selected);
+    
+
  
     return (
       <div id="portfolio" className="App mt-20 ">
@@ -129,7 +128,7 @@ class Testimonials extends React.Component {
         <Carousel responsive={responsive} infinite={true} containerClass="carousel-container" keyBoardControl={true} removeArrowOnDeviceType={["tablet", "mobile"]} deviceType={this.props.deviceType} itemClass="carousel-item-padding-40-px" className="mx-10 ">
         {Array.from({ length: list.length }).map((_, idx) => (
                     <Col>
-                      <Card className="projCard mr-2">
+                      <Card className="projCard mr-2" onClick={event =>  window.location.href = "/" + list[idx].id } >
                         <Card.Img variant="top" src={list[idx].pic} className="py-3 px-3"/>
                         <Card.Body>
                           <Card.Title>{list[idx].name}</Card.Title>
