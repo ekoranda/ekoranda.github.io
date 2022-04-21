@@ -98,7 +98,7 @@ export default function Emily() {
           variants={paragraph}
         >
           <p className="mb-0 mt-6 text-secondary line-height-35 pr-20">
-          I’m a Front-End Software Engineer located in  Madison, Wisconsin pursing a Bachelor's of Science in Computer Science. I have a passion for web design and building creating and intuitive, dynamic user experiences.
+          I’m a Front-End Software Engineer located in  Madison, Wisconsin pursuing a Bachelor's of Science in Computer Science. I have a passion for web design and building creative and intuitive, dynamic user experiences.
           </p>
           </motion.div>  
           <motion.div
