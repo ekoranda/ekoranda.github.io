@@ -4,7 +4,7 @@ import Contact from "./components/Contact.js";
 import Main from "./Main.js";
 import Home from "./components/Home";
 import { BrowserRouter , Route, Routes } from 'react-router-dom';
-import Biocompace from "./components/Biocompace.js";
+import Biocompace from "./components/Projects/Biocompace.js";
 import CourseSearch from "./components/Projects/CourseSearch.js";
 import FitnessTracker from "./components/Projects/FitnessTracker.js";
 import Healthily from "./components/Projects/Healthily.js";

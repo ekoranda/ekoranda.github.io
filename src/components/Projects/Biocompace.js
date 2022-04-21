@@ -1,16 +1,16 @@
 import React from "react";
-import NavbarExternal from "./NavbarExternal.js";
-import Contact from "./Contact.js";
-import Main from "../Main.js";
+import NavbarExternal from "../NavbarExternal.js";
+import Contact from "../Contact.js";
+import Main from "../../Main.js";
 import Carousel from "react-bootstrap/Carousel";
-import proj6 from "./img/biocompace.png";
+import proj6 from "../img/biocompace.png";
 import Row from "react-bootstrap/Row";
 import Badge from "react-bootstrap/Badge";
-import ProjectPortfolio from "./PortfolioProject";
+import ProjectPortfolio from "../PortfolioProject";
 
 
 
-import "../styles.css";
+import "../../styles.css";
 const list = [
     { img: proj6},
   ];
