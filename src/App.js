@@ -5,11 +5,11 @@ import Main from "./Main.js";
 import Home from "./components/Home";
 import { BrowserRouter , Route, Routes } from 'react-router-dom';
 import Biocompace from "./components/Biocompace.js";
-import CourseSearch from "./components/CourseSearch.js";
-import FitnessTracker from "./components/FitnessTracker.js";
-import Healthily from "./components/Healthily.js";
-import Calendar from "./components/Calendar.js";
-import PersonalPortfolio from "./components/PersonalPortfolio.js";
+import CourseSearch from "./components/Projects/CourseSearch.js";
+import FitnessTracker from "./components/Projects/FitnessTracker.js";
+import Healthily from "./components/Projects/Healthily.js";
+import Calendar from "./components/Projects/Calendar.js";
+import PersonalPortfolio from "./components/Projects/PersonalPortfolio.js";
 
 import "./styles.css";
 

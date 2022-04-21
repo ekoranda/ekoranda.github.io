@@ -140,7 +140,7 @@ const carVar = {
 
 
  
-class Testimonials extends React.Component {
+class Portfolio extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -224,4 +224,4 @@ class Testimonials extends React.Component {
       
     );
   }
-} export default Testimonials;
+} export default Portfolio;
