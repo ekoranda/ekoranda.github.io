@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "../styles.css";
 import MenuItem from "./MenuItem";
 import "react-multi-carousel/lib/styles.css";
-
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 import proj1 from "./img/Courses.png";
 import proj2 from "./img/exercise.png";
@@ -16,6 +17,53 @@ import Card from 'react-bootstrap/Card';
 import Stack from 'react-bootstrap/Stack';
 
 import Carousel from "react-multi-carousel";
+
+const titleVar = {
+  hidden: {opacity: 0},
+    visible:{
+      opacity: 1,
+      y: ['5px', '0px'],
+      transition: {
+        delay: 1,
+        duration: 1.5,
+      }
+    },
+};
+
+
+
+
+function Title() {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+  const [loaded, setLoaded]= useState(false);
+  useEffect(() => {
+    if (inView & !loaded) {
+      setLoaded(true);
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+  return (
+    <motion.div
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={titleVar}
+    >
+
+      
+      <h6 className="text-primary mb-0 mx-auto">Some of my projects</h6>
+          <h1 className="sm:text-4xl text-3xl font-semibold mb-0 text-white mx-auto">
+            My Work.
+        </h1>   
+    </motion.div>
+  );
+}
+
+
+
+
+
 
 
 const responsive = {
@@ -78,6 +126,19 @@ const ArrowLeft = Arrow({ text: '<', className: 'arrow-prev' });
 const ArrowRight = Arrow({ text: '>', className: 'arrow-next' });
  
 const selected = 'item1';
+
+const carVar = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      delay: 2.5,
+      duration: 1.5,
+    }
+  }
+}
+
+
  
 class Testimonials extends React.Component {
   constructor(props) {
@@ -85,13 +146,18 @@ class Testimonials extends React.Component {
     this.state = {
       show: false,
       selected: "",
+
     };
+    
+
 
   
     // call it again if items count changes
    
   }
  
+
+  
 
  
   onSelect = (key) => {
@@ -106,6 +172,10 @@ class Testimonials extends React.Component {
 
   }
 
+ 
+
+  
+
 
    
  
@@ -118,13 +188,16 @@ class Testimonials extends React.Component {
     return (
       <div id="portfolio" className="App mt-20 ">
         <div className="text-center mb-10">
-        <h6 className="text-primary mb-0 mx-auto">Some of my projects</h6>
-          <h1 className="sm:text-4xl text-3xl font-semibold mb-0 text-white mx-auto">
-            My Work.
-          </h1>
+        <Title />
         </div>
        
-
+        <motion.div
+          
+          initial = "hidden"
+          animate = "show"
+          
+          variants={carVar}
+        >  
         <Carousel responsive={responsive} infinite={true} containerClass="carousel-container" keyBoardControl={true} removeArrowOnDeviceType={["tablet", "mobile"]} deviceType={this.props.deviceType} itemClass="carousel-item-padding-40-px" className="mx-10 ">
         {Array.from({ length: list.length }).map((_, idx) => (
                     <Col>
@@ -140,6 +213,8 @@ class Testimonials extends React.Component {
                     </Col>
                   ))}
         </Carousel>
+
+        </motion.div>
 
       
 

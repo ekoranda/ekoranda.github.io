@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import "../styles.css";
 import girl2 from "./img/casual-life-3d-woman-taking-a-funny-photo-with-dog-1 (1).png";
 import { MdSchool } from 'react-icons/md';
@@ -46,8 +46,10 @@ const girlVar = {
 function Side() {
   const controls = useAnimation();
   const [ref, inView] = useInView();
+  const [loaded, setLoaded]= useState(false);
   useEffect(() => {
-    if (inView) {
+    if (inView & !loaded) {
+      setLoaded(true);
       controls.start("visible");
     }
   }, [controls, inView]);
@@ -73,8 +75,10 @@ function Side() {
 function Title() {
   const controls = useAnimation();
   const [ref, inView] = useInView();
+  const [loaded, setLoaded]= useState(false);
   useEffect(() => {
-    if (inView) {
+    if (inView & !loaded) {
+      setLoaded(true);
       controls.start("visible");
     }
   }, [controls, inView]);
