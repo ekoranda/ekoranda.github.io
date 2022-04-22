@@ -16,7 +16,7 @@ const factList = [
     { name: 'Emily Loves coffee', img: coffee},
     { name: 'Emily likes to hike', img: hike},
     { name: 'Emily has a cat', img: cat},
-    { name: 'Emily\'s favorite food is icecream', img:icecream},
+    { name: 'Emily\'s favorite food is ice cream', img:icecream},
     { name: 'Emily\'s favorite composer is Debussy', img:music},  
     { name: 'Emily makes stickers in her free time', img:sticker},  
   ];
