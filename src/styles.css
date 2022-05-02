@@ -482,4 +482,10 @@ font-size: 12px;
   width: 20em;
 }
 
+.bg-transparent-black {
+  background-color: rgba(0, 0, 0, 0.5);
+  
+
+}
+
 

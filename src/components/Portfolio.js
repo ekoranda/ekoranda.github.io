@@ -15,7 +15,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Stack from 'react-bootstrap/Stack';
-
+import Button from 'react-bootstrap/Button';
 import Carousel from "react-multi-carousel";
 
 const titleVar = {
@@ -90,12 +90,11 @@ const responsive = {
 
 // list of items
 const list = [
-  { name: 'Course Search Reimagined', tools: 'React, Bootstrap, CSS', pic: proj1, id:"courseSearch"},
-  { name: 'Fitness Tracker', tools: 'React-native, CSS', pic: proj2, id:"fitnessTracker" },
-  { name: 'Healthi.ly', tools: 'Android, Kotlin, Firebase', pic: proj3, id:"healthily" },
-  { name: 'Canvas Calendar Reimagined', tools: 'Figma, talk-aloud, modeling', pic: proj4 , id:"calendar"},
-  { name: 'Personal Portfolio', tools: 'React, Tailwind, Figma', pic: proj5, id:"portfolio" },
-  { name: 'Biocompace Project', tools: 'Java, BPMN, Wildfly, SAML', pic: proj6, id: "biocompace" },
+  { name: 'Course Search Reimagined', tools: 'React, Bootstrap, CSS', pic: proj1, id:"courseSearch", hover:"Identified problems with the existing UW-Madison Course Search, and Enroll and redesigned it from the ground up"},
+  { name: 'Healthi.ly', tools: 'Android, Kotlin, Firebase', pic: proj3, id:"healthily", hover:"Built an Android app that derived important health metrics from user’s using cellphone sensor data" },
+  { name: 'Canvas Calendar Reimagined', tools: 'Figma, talk-aloud, modeling', pic: proj4 , id:"calendar", hover:"Identified problems with the existing Canvas calendar, and redesigned it from the ground up"},
+  { name: 'Personal Portfolio', tools: 'React, Tailwind, Figma', pic: proj5, id:"portfolio", hover:"Created a personal portfolio built in React from scratch with custom components" },
+  { name: 'Biocompace Project', tools: 'Java, BPMN, Wildfly, SAML', pic: proj6, id: "biocompace", hover:"The Biocompace-Request service was created to provide extensible workflow management for submitting, reviewing, and managing proposals" },
 
 ];
  
@@ -201,8 +200,18 @@ class Portfolio extends React.Component {
         <Carousel responsive={responsive} infinite={true} containerClass="carousel-container" keyBoardControl={true} removeArrowOnDeviceType={["tablet", "mobile"]} deviceType={this.props.deviceType} itemClass="carousel-item-padding-40-px" className="mx-10 ">
         {Array.from({ length: list.length }).map((_, idx) => (
                     <Col>
-                      <Card className="projCard mr-2" onClick={event =>  window.location.href = "/" + list[idx].id } >
+                      <Card className="projCard mr-2 group"  >
+                      <Card.ImgOverlay className="hidden group-hover:block bg-transparent-black ">
+                        <div className="text-center text-bleachWhite">
+                          <div className="mt-5 mb-2">
+                            {list[idx].hover}
+                          </div>
+                          <Button variant="outline-light" onClick={event =>  window.location.href = "/" + list[idx].id }>Learn More</Button>
+                        </div>
+                          
+                        </Card.ImgOverlay>
                         <Card.Img variant="top" src={list[idx].pic} className="py-3 px-3"/>
+                        
                         <Card.Body>
                           <Card.Title>{list[idx].name}</Card.Title>
                           <Card.Text>
