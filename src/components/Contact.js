@@ -5,6 +5,8 @@ import { BsGithub, BsLinkedin, BsArrowRight } from 'react-icons/bs';
 import { FaDribbble } from 'react-icons/fa';
 import { SiRedbubble } from 'react-icons/si';
 import Stack from 'react-bootstrap/Stack';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 
 
@@ -13,6 +15,12 @@ export default function Contact() {
   const [mess, setMessage] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+
   const onChange = (e) => {
     const curmessage = e.target.value;
     setMessage(curmessage);
@@ -28,6 +36,7 @@ export default function Contact() {
   }
 
   const handleSubmit = (e) => {
+    handleShow();
     e.preventDefault();
     fetch("https://pml1rktkic.execute-api.us-east-1.amazonaws.com/SendEmail", {
       mode: "no-cors",
@@ -52,7 +61,7 @@ export default function Contact() {
           <div className="w-1/2">
             <h1 className="sm:text-4xl text-5xl font-semibold mb-5 text-bleachWhite">Get in touch!</h1>
             <h6 className="text-bleachWhite font-semibold">Let me know of any cool ideas!</h6>
-            <p className="text-bleachWhite font-medium leading-7 mt-10">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</p>
+            <p className="text-bleachWhite font-medium leading-7 mt-10">Let me know if you have any questions for me, or if you have any freelance opportunities you think i'd be a good fit for!</p>
           </div>
         <form
           name="contact"
@@ -98,6 +107,18 @@ export default function Contact() {
             Say Hello!
           </button>
         </form>
+
+        <Modal show={show} onHide={handleClose} className="thanksModal">
+        <Modal.Body>
+          <h1 className="text-5xl pb-3">Thanks!</h1>
+          <p>Thanks for sending me a chat! I'll get back to you soon!</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="outline-light" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
           
         </div>
        

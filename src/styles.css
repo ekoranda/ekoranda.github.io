@@ -488,4 +488,21 @@ font-size: 12px;
 
 }
 
+.thanksModal .modal-content {
+  color: #CCCCCC !important;
+  background-color: #1A0024 !important;
+  padding: 10px;
+
+}
+
+.thanksModal .modal-content:after {
+  border: 1px solid #CCCCCC;
+}
+
+.thanksModal .modal-footer{
+  border-top: none;
+}
+
+
+
 
