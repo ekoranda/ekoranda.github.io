@@ -71,6 +71,10 @@ class Navbar extends React.Component {
             <span className={this.getLinkColor('facts')}>Fun Facts!</span>
             {<CircleSvg name="facts" current={this.state.link}/>}
           </a>
+          <a href="#resume" className="mr-12 hover:text-white text-secondary relative sink" onClick={event =>  (window.location.href = "/resume") }>
+            <span className={this.getLinkColor('resume')}>Resume</span>
+            {<CircleSvg name="resume" current={this.state.link}/>}
+          </a>
         </nav>
         
         <div className="inline-flex items-center relative">

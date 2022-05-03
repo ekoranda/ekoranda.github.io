@@ -206,7 +206,7 @@ class Portfolio extends React.Component {
                           <div className="mt-5 mb-2">
                             {list[idx].hover}
                           </div>
-                          <Button variant="outline-light" onClick={event =>  window.location.href = "/" + list[idx].id }>Learn More</Button>
+                          <Button variant="outline-light" onClick={event =>  (window.location.href = "/" + list[idx].id) }>Learn More</Button>
                         </div>
                           
                         </Card.ImgOverlay>

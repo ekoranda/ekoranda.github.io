@@ -9,6 +9,7 @@ import CourseSearch from "./components/Projects/CourseSearch.js";
 import FitnessTracker from "./components/Projects/FitnessTracker.js";
 import Healthily from "./components/Projects/Healthily.js";
 import Calendar from "./components/Projects/Calendar.js";
+import Resume from "./components/Resume.js";
 import PersonalPortfolio from "./components/Projects/PersonalPortfolio.js";
 
 import "./styles.css";
@@ -20,6 +21,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/resume" element={<Resume />} />
         <Route path="/biocompace" element={<Biocompace />} />
         <Route path="/courseSearch" element={<CourseSearch />} />
         <Route path="/fitnessTracker" element={<FitnessTracker />} />
