@@ -1,6 +1,7 @@
 
 import React, {useEffect, useState} from "react";
 import girl4 from "./img/casual-life-3d-designer-at-work-mail-deadline-chat (1).png";
+import me from "./img/picure.png";
 import { BsGithub, BsLinkedin, BsArrowRight } from 'react-icons/bs';
 import { FaDribbble } from 'react-icons/fa';
 import { SiRedbubble } from 'react-icons/si';
@@ -124,16 +125,16 @@ export default function Contact() {
        
       </div>
       <div className="container px-5 pt-10 pb-8 mx-auto flex sm:flex-nowrap flex-wrap">
-          <img src={girl4}  className="w-1/3 mx-auto pt-16"/>
+          <img src={me}  className="w-1/4 mx-auto pt-16"/>
       </div>
       <div class="grid grid-cols-1 pb-5">
       <p className="mx-auto text-secondary flex">Designed &#38; Built by Emily Koranda</p>
       <div className="mx-auto mt-3">
-          <BsGithub className="inline-flex text-secondary text-2xl mr-5"></BsGithub>
-          <BsLinkedin className="inline-flex text-secondary text-2xl mr-5"></BsLinkedin>
-          <FaDribbble className="inline-flex text-secondary text-2xl mr-5"></FaDribbble>
-          <SiRedbubble className="inline-flex text-secondary text-2xl"></SiRedbubble>
-          </div>
+          <a href="https://github.com/ekoranda/" target="_blank"><BsGithub className="inline-flex text-secondary text-2xl mr-5"></BsGithub></a>
+          <a href="https://www.linkedin.com/in/emily-koranda/"><BsLinkedin className="inline-flex text-secondary text-2xl mr-5"></BsLinkedin></a>
+          <a href="https://dribbble.com/ekoranda1" target="_blank"><FaDribbble className="inline-flex text-secondary text-2xl mr-5"></FaDribbble></a>
+          <a href="https://www.redbubble.com/people/Ekoranda1/shop?asc=u" target="_blank"><SiRedbubble className="inline-flex text-secondary text-2xl"></SiRedbubble></a>
+      </div>
       <div>
       
       </div>

@@ -53,6 +53,9 @@ class NavbarExternal extends React.Component {
             <span >Fun Facts!</span>
            
           </a>
+          <a href="#resume" className="mr-12 hover:text-white text-secondary relative sink" onClick={event =>  window.location.href='/resume'}>
+            <span>Resume</span>
+          </a>
         </nav>
         
         <div className="inline-flex items-center relative">
